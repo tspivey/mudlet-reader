@@ -34,3 +34,4 @@ reader.send_event = registerAnonymousEventHandler("sysDataSendRequest", function
 		reader.stop()
 	end
 end)
+setConfig("announceIncomingText", false)

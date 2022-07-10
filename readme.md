@@ -15,6 +15,7 @@ Ctrl+s - stop speech.
 ## Installation
 Run this in Mudlet:
 ```lua uninstallPackage"reader";installPackage"https://github.com/tspivey/mudlet-reader/releases/download/v0.1/reader.mpackage"```
+Installing this package will automatically disable "Announce incoming text in screen reader" in Special Options.
 
 ## Uninstalling
 ```lua uninstallPackage"reader"```
