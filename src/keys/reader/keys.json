@@ -2,5 +2,6 @@
   {"name": "prevline", "keys": "ctrl+shift+u"},
   {"name": "curline", "keys": "ctrl+shift+i"},
   {"name": "nextline", "keys": "ctrl+shift+o"},
-  {"name": "lastline", "keys": "ctrl+shift+n"}
+  {"name": "lastline", "keys": "ctrl+shift+n"},
+  {"name": "stopspeech", "keys": "ctrl+s"}
 ]
