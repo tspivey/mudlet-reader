@@ -1,6 +1,6 @@
 {
   "package": "reader",
-  "version": "0.1",
+  "version": "0.1.1",
   "author": "Tyler Spivey",
   "title": "Reader",
   "description": "Reads output with TTS"
