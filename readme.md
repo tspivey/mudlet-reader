@@ -7,9 +7,17 @@ It also works on Windows, using SAPI.
 Install this package, and output should start speaking. It will only speak when Mudlet is in focus.
 The speech is interrupted when you press enter.
 
-On Windows, the modifier is Ctrl+Shift; on mac, use Cmd+shift.
+On Windows, use Ctrl. On Mac, Use Cmd.
 Ctrl+Shift+u/i/o - read previous, current and next line.
 Ctrl+Shift+n - move to and read the last line of output.
+Ctrl+s - stop speech.
+
+## Installation
+Run this in Mudlet:
+```lua uninstallPackage"reader";installPackage"https://github.com/tspivey/mudlet-reader/releases/download/v0.1/reader.mpackage"```
+
+## Uninstalling
+```lua uninstallPackage"reader"```
 
 ## Building
 You'll need [Muddler](https://github.com/demonnic/muddler). Once installed, run `muddle` and a package will be generated.
