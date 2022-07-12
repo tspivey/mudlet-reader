@@ -12,7 +12,9 @@ function reader:install_trigger()
 	end
 	reader.trigger_id = tempRegexTrigger("^", f)
 end
-tempTimer(0, function() reader:install_trigger() end)
+if getOS() ~= "windows" then
+	tempTimer(0, function() reader:install_trigger() end)
+end
 function reader.remove(event, pkg)
 	if pkg ~= "reader" then
 		return true -- keep our handler around
@@ -29,9 +31,22 @@ function reader.stop()
 	ttsClearQueue()
 	ttsSkip()
 end
-reader.send_event = registerAnonymousEventHandler("sysDataSendRequest", function()
-	if command then
+function reader.say(text, interrupt)
+	if getOS() == "windows" then
+		announce(text)
+		return
+	end
+	if interrupt then
 		reader.stop()
 	end
-end)
-setConfig("announceIncomingText", false)
+	ttsQueue(text)
+end
+
+if getOS() ~= "windows" then
+	reader.send_event = registerAnonymousEventHandler("sysDataSendRequest", function()
+		if command then
+			reader.stop()
+		end
+	end)
+	setConfig("announceIncomingText", false)
+end
