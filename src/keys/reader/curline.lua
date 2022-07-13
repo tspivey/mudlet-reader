@@ -1,2 +1,3 @@
 local line = getLines(reader.line, reader.line + 1)[1]
-reader.say(line, true)
+reader.stop()
+reader.sayline(line)

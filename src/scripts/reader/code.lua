@@ -28,6 +28,9 @@ function reader.remove(event, pkg)
 end
 registerAnonymousEventHandler("sysUninstall", reader.remove, true)
 function reader.stop()
+	if getOS() == "windows" then
+		return
+	end
 	ttsClearQueue()
 	ttsSkip()
 end
@@ -40,6 +43,13 @@ function reader.say(text, interrupt)
 		reader.stop()
 	end
 	ttsQueue(text)
+end
+
+function reader.sayline(line)
+	if line == "" then
+		line = "blank"
+	end
+	reader.say(line)
 end
 
 if getOS() ~= "windows" then

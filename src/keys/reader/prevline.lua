@@ -4,4 +4,4 @@ if reader.line < 0 then
 	reader.line = 0
 end
 local line = getLines(reader.line, reader.line + 1)[1]
-reader.say(line)
+reader.sayline(line)

@@ -5,4 +5,4 @@ if reader.line > getLineCount() - 1 then
 	reader.line = getLineCount() - 1
 end
 local line = getLines(reader.line, reader.line + 1)[1]
-reader.say(line)
+reader.sayline(line)
