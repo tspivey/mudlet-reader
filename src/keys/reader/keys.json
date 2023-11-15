@@ -3,5 +3,7 @@
   {"name": "curline", "keys": "ctrl+shift+i"},
   {"name": "nextline", "keys": "ctrl+shift+o"},
   {"name": "lastline", "keys": "ctrl+shift+n"},
-  {"name": "stopspeech", "keys": "ctrl+s"}
+  {"name": "stopspeech", "keys": "ctrl+s"},
+  {"name": "firstline", "keys": "ctrl+shift+y"},
+  {"name": "copyline", "keys": "ctrl+shift+space"}
 ]
